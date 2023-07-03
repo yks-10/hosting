@@ -81,6 +81,16 @@ go to the web and click reload
 
 
 
-
+In settings this need to be done for api integration
+    CORS_ORIGIN_ALLOW_ALL = False
+    CORS_ORIGIN_REGEX_WHITELIST = ('^(http?://)?(\w+\.)?localhost\:3000$',)
+    ALLOWED_HOSTS = [
+        'INTERACTIVEMENUCARD.pythonanywhere.com',
+        # Localhost
+        'http://localhost:3000',
+        'http://localhost:8000',]
+    
+    CORS_ALLOWED_ORIGINS = ALLOWED_HOSTS
+    CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
     
 
